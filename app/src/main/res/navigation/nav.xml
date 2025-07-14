@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/listaSuperheroe">
+
+    <fragment
+        android:id="@+id/listaSuperheroe"
+        android:name="com.example.superheroes.listaSuperheroe"
+        android:label="fragment_lista_superheroe"
+        tools:layout="@layout/fragment_lista_superheroe" >
+        <action
+            android:id="@+id/action_listaSuperheroe_to_crearSuperheroe"
+            app:destination="@id/crearSuperheroe" />
+        <action
+            android:id="@+id/action_listaSuperheroe_to_verSuperheroe"
+            app:destination="@id/verSuperheroe" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearSuperheroe"
+        android:name="com.example.superheroes.crearSuperheroe"
+        android:label="fragment_crear_superheroe"
+        tools:layout="@layout/fragment_crear_superheroe" >
+        <action
+            android:id="@+id/action_crearSuperheroe_to_listaSuperheroe"
+            app:destination="@id/listaSuperheroe" />
+    </fragment>
+    <fragment
+        android:id="@+id/verSuperheroe"
+        android:name="com.example.superheroes.verSuperheroe"
+        android:label="fragment_ver_superheroe"
+        tools:layout="@layout/fragment_ver_superheroe" >
+        <action
+            android:id="@+id/action_verSuperheroe_to_listaSuperheroe"
+            app:destination="@id/listaSuperheroe" />
+        <action
+            android:id="@+id/action_verSuperheroe_to_editarSuperheroe"
+            app:destination="@id/editarSuperheroe" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarSuperheroe"
+        android:name="com.example.superheroes.editarSuperheroe"
+        android:label="fragment_editar_superheroe"
+        tools:layout="@layout/fragment_editar_superheroe" >
+        <action
+            android:id="@+id/action_editarSuperheroe_to_verSuperheroe"
+            app:destination="@id/verSuperheroe" />
+    </fragment>
+</navigation>
